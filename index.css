@@ -1,0 +1,50 @@
+/* these groupings are called CSS rules, we specify which element, or elements we want to follow the rule, open a bracket, then list out the properties for the rule */
+
+/* Some browsers add CSS rules to sites by default, Chrome gives the body element a margin of 8 pixels, but we don't want that for this so I'm overwriting it here */
+body {
+    margin: 0;
+}
+
+/* You specify multiple references with a single rule! */
+/* Also, notice how this is saving me from writing a ton of code! Instead of adding these properties to each rectangle by thier id, I can give it to all of them with one rule by giving them a class! */
+.mouse-drift-div, #background {
+    /* flexbox is a tool in CSS that helps you position things in complex ways, this rule will make the rectangle inside each rectangle be perfectly centered */
+    /* learn more about flexbox here https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Below here are the rules specific to each element, so I reference their ids */
+#background {
+    background-color: red;
+    width: 100vw; /* Notice the units of measurements I'm using here, by saying I want 100% of the viewport width and height, it covers the whole screen no matter how big or small the screen is! */
+    height: 100vh;
+}
+
+#rectangle-1 {
+    width: calc(100vw - 15%); /* You don't know how big the user's screen will be, so let CSS figure it out! Also you can use the calc function if you know the relative size you need, but don't know the exact number of pixels */
+    height: calc(100vh - 15%); /* 15% of what? The percentage unit refers to the amount of the element's parent element, which is the element that this element is inside of, so for this example it means 15% of the height of #backgound */
+    background-color: blue;
+    top: 10px;
+}
+
+#rectangle-2 {
+    width: calc(100vw - 30%); /* I'm increasing the amount I'm subtracting from the width and height so that the next rectangle is smaller than the last one */
+    height: calc(100vh - 30%); /* this is 30% of the height of #rectangle-1 */
+    background-color: green;
+}
+
+#rectangle-3 {
+    width: calc(100vw - 45%);
+    height: calc(100vh - 45%);/* this is 45% of the height of #rectangle-1 */
+    background-color: yellow;
+}
+
+#rectangle-4 {
+    width: calc(100vw - 60%);
+    height: calc(100vh - 60%); /* this is 60% of the height of #rectangle-3 */
+    background-color: pink;
+    /* use background-image: url(); to put an image here! */
+}

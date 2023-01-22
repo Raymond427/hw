@@ -1,0 +1,44 @@
+<!-- This line tells the browser reading the file that this is HTML, and that it's using HTML5.0 -->
+<!DOCTYPE html>
+<!-- this begins the html content, you can also specifiy what language your html will be in here -->
+<html lang="en">
+<!-- The head tag should contain all of the information you want to add that you don't want to be visible on the webpage, most of this isn't required but recommended-->
+  <head>
+    <!-- Who, or what organization wrote this HTML -->
+    <meta name="author" content="Raymond Ferrell">
+    <!-- How the characters in the HTML are encoded (aka converted to binary numbers for smaller and convienient storage) UTF-8 is the most common -->
+    <meta charset="utf-8">
+    <!-- This one is special, when Google searches for webpages, one of the many things it does is look through these keywords, so add words here that you would want people to search for -->
+    <meta name="keywords" content="Raymond, Ferrell, Raymond Ferrell, Software Engineer, Web Developer, Web Designer, Product Manager, Software, Engineer, React, Javascript, Ruby, Rails, App, Web, Application, Designer, Developer, Freelancer" />
+    <!-- This is the description you'll see when someone finds your webpage in Google, Yahoo Bing etc. -->
+    <meta name="description" content="I'm a Community Volunteer, Entrepreneur, Software Engineer and Web Designer. I'm interested in creating software that helps underpriviledged people find their passion and reach their potential." />
+    <!-- This is the tiny picture that you see inside the browser tab! -->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- This is the text that you see inside the browser tab -->
+    <title>Raymond Ferrell</title>
+    <!-- Telling the browser to download and run our javascript file! -->
+    <!-- The defer keyword here is cool, the browser doesn't know if it should keep running and putting the HTML on the browser page, or if it should stop and run this javascript first -->
+    <!-- Since our javascript is going to use the HTML elements we're writing here, I need the browser to completely build all of the HTML before it runs our javascript -->
+    <!-- So I put defer here to tell the browser that it can download the javascript as soon as possible, BUT don't run the javascript until the HTML and CSS are finished and displaying in the browser! -->
+    <script src="./index.js" defer></script>
+    <!-- Telling the browser to download and run the CSS, since CSS is only used to decorate HTML, browsers knows that they need to build the HTML first before running the CSS, so we don't need defer here -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <!-- body and footer contain all of the html that you want to appear in the browser -->
+  <body>
+    <!-- not giving this one the mouse-drift-div class, because we don't want the outtermost div to move with the mouse -->
+    <div id="background">
+        <div class="mouse-drift-div" id="rectangle-1">
+            <div class="mouse-drift-div" id="rectangle-2">
+                <div class="mouse-drift-div" id="rectangle-3">
+                    <div class="mouse-drift-div" id="rectangle-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <!-- You don't need to add a footer if you don't have anything to put in it, but if you add an opening html tag, always add the closing tag somewhere after -->
+  <footer>
+  </footer>
+</html>
